@@ -1,0 +1,18 @@
+loop = 23
+
+time_24 = str(input('convert now '))
+
+if len(time_24) == 5:
+    a = int((time_24[0]+time_24[1]))
+    if a > 12:
+        b = str(a-12)
+        time_12 = time_24.replace(time_24[0:2], b)
+        time_12 = time_12 +' PM'
+        print(time_12)
+    elif a < 12:
+        time_12 = time_24 + ' AM'
+        print(time_12)
+
+elif len(time_24) == 4:
+    time_24 =  '0' + str(time_24) + ' AM'
+    print(time_24)
