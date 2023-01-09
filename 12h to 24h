@@ -1,0 +1,27 @@
+loop1 = 2
+while loop1 > 1:
+    try:
+        time_i = str(input("what time is the time you wish to convert? "))
+        pm = input("AM or PM? ")
+        loop1 = 0
+    except:
+        print("type correctly man")
+
+if pm == "PM":
+    if len(time_i) < 5:
+        time_i = "0" + str(time_i)
+    a = int(time_i[0] + time_i[1])
+    if a == 12:
+        time_f =  time_i + ' PM'
+    else:
+        b = str(a + 12)
+        time_f = time_i.replace(time_i[0:2], b)
+    print(time_f)
+
+elif pm == "AM":
+    if len(time_i) < 5:
+        time_f = "0" + str(time_i)
+    print(time_f)
+    
+else:
+    print('you meant AM or PM?')
